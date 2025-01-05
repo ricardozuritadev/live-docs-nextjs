@@ -1,3 +1,9 @@
+import { Editor } from "@/components/editor/Editor";
+
 export default function Document() {
-    return <div>Document</div>;
+    return (
+        <main>
+            <Editor />
+        </main>
+    );
 }
