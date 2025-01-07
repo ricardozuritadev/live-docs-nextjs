@@ -1,5 +1,6 @@
 import { Editor } from "@/components/editor/Editor";
 import Header from "@/components/ui/Header";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Document() {
     return (
@@ -10,6 +11,14 @@ export default function Document() {
                         This is a fake document tile
                     </p>
                 </div>
+
+                <SignedOut>
+                    <SignInButton />
+                </SignedOut>
+
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
             </Header>
 
             <Editor />
